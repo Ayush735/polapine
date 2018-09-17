@@ -1,0 +1,222 @@
+  [1m[35m (1189.5ms)[0m  [1m[35mCREATE DATABASE "polapine_dev" ENCODING = 'unicode'[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "polapine_dev" ENCODING = 'unicode'[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (177.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (128.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6080458524596723190)[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateAmenities (20180916091156)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (88.5ms)[0m  [1m[35mCREATE TABLE "amenities" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091156_create_amenities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091156"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateExpences (20180916091212)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (118.9ms)[0m  [1m[35mCREATE TABLE "expences" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091212_create_expences.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091212"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreatePolicies (20180916091221)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (79.8ms)[0m  [1m[35mCREATE TABLE "policies" ("id" bigserial primary key, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091221_create_policies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091221"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateProperties (20180916091232)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "name" character varying, "property_type_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091232_create_properties.rb:3
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_property_type_id" ON "properties"  ("property_type_id")[0m
+  ↳ db/migrate/20180916091232_create_properties.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091232"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRoles (20180916091241)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (76.0ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091241_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091241"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRooms (20180916091245)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (109.9ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" bigserial primary key, "sqr_ft" character varying, "rent" integer, "deposit" integer, "current_status" boolean, "no_of_beds" integer, "furnishing_type_id" bigint, "bath_type_id" bigint, "property_id" bigint, "sharing_type_id" bigint, "tenant_type_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (64.4ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_furnishing_type_id" ON "rooms"  ("furnishing_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_bath_type_id" ON "rooms"  ("bath_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (42.5ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_property_id" ON "rooms"  ("property_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (31.3ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_sharing_type_id" ON "rooms"  ("sharing_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (42.2ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_tenant_type_id" ON "rooms"  ("tenant_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091245"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateTenantTypes (20180916091302)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE TABLE "tenant_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091302_create_tenant_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091302"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateSharingTypes (20180916091313)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "sharing_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091313_create_sharing_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091313"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreatePropertyTypes (20180916091334)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (94.1ms)[0m  [1m[35mCREATE TABLE "property_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091334_create_property_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091334"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (24.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateFurnishingTypes (20180916091351)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (113.0ms)[0m  [1m[35mCREATE TABLE "furnishing_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091351_create_furnishing_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091351"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateAddresses (20180916095349)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (106.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "address_line_1" character varying, "address_line_2" character varying, "nearest_landmark" character varying, "colony" character varying, "city" character varying, "state" character varying, "pin" integer, "addressable_type" character varying, "addressable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916095349_create_addresses.rb:3
+  [1m[35m (53.1ms)[0m  [1m[35mCREATE  INDEX  "index_addresses_on_addressable_type_and_addressable_id" ON "addresses"  ("addressable_type", "addressable_id")[0m
+  ↳ db/migrate/20180916095349_create_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916095349"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUsers (20180916102309)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (116.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "primary_contact" character varying, "secondary_contact" character varying, "gender" character varying, "role_id" bigint, "address_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916102309_create_users.rb:3
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_role_id" ON "users"  ("role_id")[0m
+  ↳ db/migrate/20180916102309_create_users.rb:3
+  [1m[35m (31.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_address_id" ON "users"  ("address_id")[0m
+  ↳ db/migrate/20180916102309_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916102309"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateBathTypes (20180916104658)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (97.6ms)[0m  [1m[35mCREATE TABLE "bath_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916104658_create_bath_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916104658"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateAmentiesRooms (20180916105836)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE TABLE "amenties_rooms" ("id" bigserial primary key, "amenity_id" bigint, "room_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916105836_create_amenties_rooms.rb:3
+  [1m[35m (64.7ms)[0m  [1m[35mCREATE  INDEX  "index_amenties_rooms_on_amenity_id" ON "amenties_rooms"  ("amenity_id")[0m
+  ↳ db/migrate/20180916105836_create_amenties_rooms.rb:3
+  [1m[35m (43.2ms)[0m  [1m[35mCREATE  INDEX  "index_amenties_rooms_on_room_id" ON "amenties_rooms"  ("room_id")[0m
+  ↳ db/migrate/20180916105836_create_amenties_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916105836"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreatePoliciesRooms (20180916110032)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (56.4ms)[0m  [1m[35mCREATE TABLE "policies_rooms" ("id" bigserial primary key, "policy_id" bigint, "room_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916110032_create_policies_rooms.rb:3
+  [1m[35m (29.5ms)[0m  [1m[35mCREATE  INDEX  "index_policies_rooms_on_policy_id" ON "policies_rooms"  ("policy_id")[0m
+  ↳ db/migrate/20180916110032_create_policies_rooms.rb:3
+  [1m[35m (53.5ms)[0m  [1m[35mCREATE  INDEX  "index_policies_rooms_on_room_id" ON "policies_rooms"  ("room_id")[0m
+  ↳ db/migrate/20180916110032_create_policies_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916110032"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateExpencesRooms (20180916110224)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (55.1ms)[0m  [1m[35mCREATE TABLE "expences_rooms" ("id" bigserial primary key, "expence_id" bigint, "room_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916110224_create_expences_rooms.rb:3
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE  INDEX  "index_expences_rooms_on_expence_id" ON "expences_rooms"  ("expence_id")[0m
+  ↳ db/migrate/20180916110224_create_expences_rooms.rb:3
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE  INDEX  "index_expences_rooms_on_room_id" ON "expences_rooms"  ("room_id")[0m
+  ↳ db/migrate/20180916110224_create_expences_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916110224"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateImages (20180917164012)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (90.8ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180917164012_create_images.rb:3
+  [1m[35m (31.2ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  ↳ db/migrate/20180917164012_create_images.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180917164012"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRoomsUsers (20180917165601)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (61.6ms)[0m  [1m[35mCREATE TABLE "rooms_users" ("id" bigserial primary key, "room_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180917165601_create_rooms_users.rb:3
+  [1m[35m (53.2ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_users_on_room_id" ON "rooms_users"  ("room_id")[0m
+  ↳ db/migrate/20180917165601_create_rooms_users.rb:3
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_users_on_user_id" ON "rooms_users"  ("user_id")[0m
+  ↳ db/migrate/20180917165601_create_rooms_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180917165601"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-17 18:03:57.056712"], ["updated_at", "2018-09-17 18:03:57.056712"]]
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6080458524596723190)[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23

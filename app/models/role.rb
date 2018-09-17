@@ -1,3 +1,5 @@
 class Role < ApplicationRecord
-	ROLE_LIST = ['Tenant', 'Room Owner']
+	ROLE_LIST = ['Admin','Owner','Tenant']
+  has_many :users
+  validates :name, presence: true, uniquness:true
 end
