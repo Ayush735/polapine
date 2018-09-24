@@ -7,6 +7,7 @@ class Room < ApplicationRecord
   has_one :tenant_type
 
   has_one :address, as: :addressable
+  accepts_nested_attributes_for :address, allow_destroy: true
   
   has_many :amenities
   has_many :policies
