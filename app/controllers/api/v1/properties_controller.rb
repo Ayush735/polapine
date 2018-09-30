@@ -6,10 +6,10 @@ class Api::V1::PropertiesController < Api::V1::BaseController
     render json: @properties
   end
 
-  def new
-    @property = Property.new
-    render json: @property
-  end
+  # def new
+  #   @property = Property.new
+  #   render json: @property
+  # end
 
   def create 
     @property = Property.new(property_params)
@@ -20,9 +20,9 @@ class Api::V1::PropertiesController < Api::V1::BaseController
     end  
   end
 
-  def edit
-    render json: @property
-  end
+  # def edit
+  #   render json: @property
+  # end
 
   def update
     if @property.update(property_params)

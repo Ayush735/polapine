@@ -6,10 +6,10 @@ class Api::V1::ExpencesController < Api::V1::BaseController
     render json: @expences
   end
 
-  def new
-    @expence = Expence.new
-    render json: @expence
-  end
+  # def new
+  #   @expence = Expence.new
+  #   render json: @expence
+  # end
 
   def create 
     @expence = Expence.new(expence_params)
@@ -20,8 +20,9 @@ class Api::V1::ExpencesController < Api::V1::BaseController
     end  
   end
 
-  def edit
-  end
+  # def edit
+  #   render json: @expence
+  # end
 
   def update
     if @expence.update(expence_params)
@@ -32,6 +33,7 @@ class Api::V1::ExpencesController < Api::V1::BaseController
   end
 
   def show
+    render json: @expence
   end
   
   def destroy

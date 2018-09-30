@@ -6,10 +6,10 @@ class Api::V1::RoomsController < Api::V1::BaseController
     render json: @rooms 
   end
 
-  def new
-    @room = Room.new
-    render json: @room
-  end
+  # def new
+  #   @room = Room.new
+  #   render json: @room
+  # end
 
   def create 
     @room = Room.new(room_params)
@@ -20,9 +20,9 @@ class Api::V1::RoomsController < Api::V1::BaseController
     end  
   end
 
-  def edit
-    render json: @room
-  end
+  # def edit
+  #   render json: @room
+  # end
 
   def update
     @room = @room.update(room_params)

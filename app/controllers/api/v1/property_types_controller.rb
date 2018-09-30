@@ -6,10 +6,10 @@ class Api::V1::AmenitiesController < Api::V1::BaseController
     render json: @property_types
   end
 
-  def new
-    @property_type = PropertyType.new
-    render json: @property_type
-  end
+  # def new
+  #   @property_type = PropertyType.new
+  #   render json: @property_type
+  # end
 
   def create 
     @property_type = PropertyType.new(property_type_params)
@@ -20,8 +20,9 @@ class Api::V1::AmenitiesController < Api::V1::BaseController
     end  
   end
 
-  def edit
-  end
+  # def edi
+  #   render json: @property_type
+  # end
 
   def update
     if @property_type.update(property_type_params)
@@ -32,6 +33,7 @@ class Api::V1::AmenitiesController < Api::V1::BaseController
   end
 
   def show
+    render json: @property_type
   end
   
   def destroy

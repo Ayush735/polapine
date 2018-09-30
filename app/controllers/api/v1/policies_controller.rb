@@ -6,10 +6,10 @@ class Api::V1::PoliciesController < Api::V1::BaseController
     render json: @policies
   end
 
-  def new
-    @policy = Policy.new
-    render json: @policy
-  end
+  # def new
+  #   @policy = Policy.new
+  #   render json: @policy
+  # end
 
   def create 
     @policy = Policy.new(policy_params)
@@ -20,9 +20,9 @@ class Api::V1::PoliciesController < Api::V1::BaseController
     end  
   end
 
-  def edit
-    render json: @policy
-  end
+  # def edit
+  #   render json: @policy
+  # end
 
   def update
     if @policy.update(policy_params)

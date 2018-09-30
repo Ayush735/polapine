@@ -6,10 +6,10 @@ class Api::V1::SharingTypesController < Api::V1::BaseController
     render json: @sharing_types
   end
 
-  def new
-    @sharing_type  = SharingType.new
-    render json: @sharing_type 
-  end
+  # def new
+  #   @sharing_type  = SharingType.new
+  #   render json: @sharing_type 
+  # end
 
   def create 
     @sharing_type  = SharingType.new(sharing_type_params)
@@ -20,9 +20,9 @@ class Api::V1::SharingTypesController < Api::V1::BaseController
     end  
   end
 
-  def edit
-    rendr json: @sharing_type
-  end
+  # def edit
+  #   rendr json: @sharing_type
+  # end
 
   def update
     @sharing_type.update(sharing_type_params)

@@ -1,15 +1,15 @@
 class Api::V1::AmenitiesController < Api::V1::BaseController
-  before_action :load_amenity, only: [:edit, :show, :destroy]
+  before_action :load_amenity, only: [:show, :update ,:destroy]
   
   def index
     @amenities = Amenities.all
     render json: @amenities
   end
 
-  def new
-    @amenity = Amenity.new
-    render json: @amenity
-  end
+  # def new
+  #   @amenity = Amenity.new
+  #   render json: @amenity
+  # end
 
   def create 
     @amenity = Amenity.new(amenity_params)
@@ -20,9 +20,9 @@ class Api::V1::AmenitiesController < Api::V1::BaseController
     end
   end
 
-  def edit
-    render json: @amenity
-  end
+  # def edit
+  #   render json: @amenity
+  # end
 
   def update
     if @amenity.update(amenity_params)

@@ -6,10 +6,10 @@ class Api::V1::FurnishingTypesController < Api::V1::BaseController
     render json: @furnishing_types 
   end
 
-  def new
-    @furnishing_type = FurnishingType.new
-    render json: @furnishing_type 
-  end
+  # def new
+  #   @furnishing_type = FurnishingType.new
+  #   render json: @furnishing_type 
+  # end
 
   def create 
     @furnishing_type = FurnishingType.new(furnishing_type_params)
@@ -20,9 +20,9 @@ class Api::V1::FurnishingTypesController < Api::V1::BaseController
     end  
   end
 
-  def edit
-    render json: @furnishing_type
-  end
+  # def edit
+  #   render json: @furnishing_type
+  # end
 
   def update
     if @furnishing_type.update(furnishing_type_params)
