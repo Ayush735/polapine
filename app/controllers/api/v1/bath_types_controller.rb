@@ -1,4 +1,5 @@
 class Api::V1::BathTypesController < Api::V1::BaseController
+  protect_from_forgery with: :exception
   before_action :load_bath_type, only: [:show, :update, :destroy]
   
   def index

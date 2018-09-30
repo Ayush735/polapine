@@ -9,7 +9,7 @@
    
   Amenity.create(Amenity::AMENTIES_LIST.map{|name| { name: name } })
    
-  FernishingType.create(FernishingType::FURNISHING_ROOM_TYPE.map{|name| { name: name } })
+  FurnishingType.create(FurnishingType::FURNISHING_ROOM_TYPE.map{|name| { name: name } })
 
   SharingType.create(SharingType::SHARING_ROOM_TYPE.map{|name| { name: name } })
    	

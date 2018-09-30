@@ -220,3 +220,1293 @@ Migrating to CreateRoomsUsers (20180917165601)
   ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ayush/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT VERSION()[0m
+  ↳ (erb):45
+  [1m[35m (51.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6080458524596723190)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (50.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6080458524596723190)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6080458524596723190)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20180930101408)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (419.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "allow_password_change" boolean DEFAULT FALSE, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "tokens" json, "first_name" character varying, "nickname" character varying, "last_name" character varying, "email" character varying, "primary_contact" character varying, "secondary_contact" character varying, "image" character varying, "gender" character varying, "role_id" bigint, "address_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:4
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6080458524596723190)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (55.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (5030.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "polapine_dev"[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "polapine_rails_dev"[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (2571.1ms)[0m  [1m[35mCREATE DATABASE "polapine_rails_dev" ENCODING = 'unicode'[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (139.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (142.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7351992778863311145)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateAmenities (20180916091156)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (135.3ms)[0m  [1m[35mCREATE TABLE "amenities" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091156_create_amenities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091156"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateExpences (20180916091212)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (108.3ms)[0m  [1m[35mCREATE TABLE "expences" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091212_create_expences.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091212"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (24.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreatePolicies (20180916091221)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (95.7ms)[0m  [1m[35mCREATE TABLE "policies" ("id" bigserial primary key, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091221_create_policies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091221"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateProperties (20180916091232)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (135.4ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "name" character varying, "property_type_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091232_create_properties.rb:3
+  [1m[35m (60.5ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_property_type_id" ON "properties"  ("property_type_id")[0m
+  ↳ db/migrate/20180916091232_create_properties.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091232"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateRoles (20180916091241)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (140.4ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091241_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091241"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateRooms (20180916091245)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (117.4ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" bigserial primary key, "sqr_ft" character varying, "rent" integer, "deposit" integer, "current_status" boolean, "no_of_beds" integer, "furnishing_type_id" bigint, "bath_type_id" bigint, "property_id" bigint, "sharing_type_id" bigint, "tenant_type_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (74.4ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_furnishing_type_id" ON "rooms"  ("furnishing_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_bath_type_id" ON "rooms"  ("bath_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (53.1ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_property_id" ON "rooms"  ("property_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (75.0ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_sharing_type_id" ON "rooms"  ("sharing_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[35m (63.1ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_on_tenant_type_id" ON "rooms"  ("tenant_type_id")[0m
+  ↳ db/migrate/20180916091245_create_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091245"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateTenantTypes (20180916091302)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (147.1ms)[0m  [1m[35mCREATE TABLE "tenant_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091302_create_tenant_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091302"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateSharingTypes (20180916091313)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (84.8ms)[0m  [1m[35mCREATE TABLE "sharing_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091313_create_sharing_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091313"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreatePropertyTypes (20180916091334)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (123.7ms)[0m  [1m[35mCREATE TABLE "property_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091334_create_property_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091334"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateFurnishingTypes (20180916091351)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (94.2ms)[0m  [1m[35mCREATE TABLE "furnishing_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916091351_create_furnishing_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916091351"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateAddresses (20180916095349)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (94.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "address_line_1" character varying, "address_line_2" character varying, "nearest_landmark" character varying, "colony" character varying, "city" character varying, "state" character varying, "pin" integer, "addressable_type" character varying, "addressable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916095349_create_addresses.rb:3
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE  INDEX  "index_addresses_on_addressable_type_and_addressable_id" ON "addresses"  ("addressable_type", "addressable_id")[0m
+  ↳ db/migrate/20180916095349_create_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916095349"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (24.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateBathTypes (20180916104658)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (96.9ms)[0m  [1m[35mCREATE TABLE "bath_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916104658_create_bath_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916104658"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (24.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateAmentiesRooms (20180916105836)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (66.6ms)[0m  [1m[35mCREATE TABLE "amenties_rooms" ("id" bigserial primary key, "amenity_id" bigint, "room_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916105836_create_amenties_rooms.rb:3
+  [1m[35m (48.2ms)[0m  [1m[35mCREATE  INDEX  "index_amenties_rooms_on_amenity_id" ON "amenties_rooms"  ("amenity_id")[0m
+  ↳ db/migrate/20180916105836_create_amenties_rooms.rb:3
+  [1m[35m (52.4ms)[0m  [1m[35mCREATE  INDEX  "index_amenties_rooms_on_room_id" ON "amenties_rooms"  ("room_id")[0m
+  ↳ db/migrate/20180916105836_create_amenties_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916105836"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreatePoliciesRooms (20180916110032)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (88.4ms)[0m  [1m[35mCREATE TABLE "policies_rooms" ("id" bigserial primary key, "policy_id" bigint, "room_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916110032_create_policies_rooms.rb:3
+  [1m[35m (60.2ms)[0m  [1m[35mCREATE  INDEX  "index_policies_rooms_on_policy_id" ON "policies_rooms"  ("policy_id")[0m
+  ↳ db/migrate/20180916110032_create_policies_rooms.rb:3
+  [1m[35m (41.4ms)[0m  [1m[35mCREATE  INDEX  "index_policies_rooms_on_room_id" ON "policies_rooms"  ("room_id")[0m
+  ↳ db/migrate/20180916110032_create_policies_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916110032"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateExpencesRooms (20180916110224)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (95.8ms)[0m  [1m[35mCREATE TABLE "expences_rooms" ("id" bigserial primary key, "expence_id" bigint, "room_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180916110224_create_expences_rooms.rb:3
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE  INDEX  "index_expences_rooms_on_expence_id" ON "expences_rooms"  ("expence_id")[0m
+  ↳ db/migrate/20180916110224_create_expences_rooms.rb:3
+  [1m[35m (52.6ms)[0m  [1m[35mCREATE  INDEX  "index_expences_rooms_on_room_id" ON "expences_rooms"  ("room_id")[0m
+  ↳ db/migrate/20180916110224_create_expences_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916110224"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (20.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateImages (20180917164012)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (633.6ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180917164012_create_images.rb:3
+  [1m[35m (74.1ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  ↳ db/migrate/20180917164012_create_images.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180917164012"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to CreateRoomsUsers (20180917165601)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (86.4ms)[0m  [1m[35mCREATE TABLE "rooms_users" ("id" bigserial primary key, "room_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180917165601_create_rooms_users.rb:3
+  [1m[35m (75.7ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_users_on_room_id" ON "rooms_users"  ("room_id")[0m
+  ↳ db/migrate/20180917165601_create_rooms_users.rb:3
+  [1m[35m (64.0ms)[0m  [1m[35mCREATE  INDEX  "index_rooms_users_on_user_id" ON "rooms_users"  ("user_id")[0m
+  ↳ db/migrate/20180917165601_create_rooms_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180917165601"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20180930101408)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (140.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "allow_password_change" boolean DEFAULT FALSE, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "tokens" json, "first_name" character varying, "nickname" character varying, "last_name" character varying, "email" character varying, "primary_contact" character varying, "secondary_contact" character varying, "image" character varying, "gender" character varying, "role_id" bigint, "address_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:4
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_role_id" ON "users"  ("role_id")[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:4
+  [1m[35m (54.1ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_address_id" ON "users"  ("address_id")[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:4
+  [1m[35m (59.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:56
+  [1m[35m (67.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_uid_and_provider" ON "users"  ("uid", "provider")[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:57
+  [1m[35m (53.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:58
+  [1m[35m (52.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  ↳ db/migrate/20180930101408_devise_token_auth_create_users.rb:59
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180930101408"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (13.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-30 10:35:12.421704"], ["updated_at", "2018-09-30 10:35:12.421704"]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7351992778863311145)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7351992778863311145)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7351992778863311145)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "PG For Girls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.6ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PG For Girls"], ["created_at", "2018-09-30 10:45:34.510474"], ["updated_at", "2018-09-30 10:45:34.510474"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (20.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "PG For Boys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.4ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PG For Boys"], ["created_at", "2018-09-30 10:45:34.535437"], ["updated_at", "2018-09-30 10:45:34.535437"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "PG For Both"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.4ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PG For Both"], ["created_at", "2018-09-30 10:45:34.546273"], ["updated_at", "2018-09-30 10:45:34.546273"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "Hostel For Girls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.4ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hostel For Girls"], ["created_at", "2018-09-30 10:45:34.557204"], ["updated_at", "2018-09-30 10:45:34.557204"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "Hostel For Boys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.4ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hostel For Boys"], ["created_at", "2018-09-30 10:45:34.568280"], ["updated_at", "2018-09-30 10:45:34.568280"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "Hostel For Both"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.5ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hostel For Both"], ["created_at", "2018-09-30 10:45:34.579415"], ["updated_at", "2018-09-30 10:45:34.579415"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "House for Girls"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.5ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House for Girls"], ["created_at", "2018-09-30 10:45:34.590705"], ["updated_at", "2018-09-30 10:45:34.590705"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "House for Boys"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.4ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House for Boys"], ["created_at", "2018-09-30 10:45:34.601765"], ["updated_at", "2018-09-30 10:45:34.601765"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "property_types" WHERE "property_types"."name" = $1 LIMIT $2[0m  [["name", "House For Both"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mPropertyType Create (0.4ms)[0m  [1m[32mINSERT INTO "property_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House For Both"], ["created_at", "2018-09-30 10:45:34.613076"], ["updated_at", "2018-09-30 10:45:34.613076"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Bed"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.6ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bed"], ["created_at", "2018-09-30 10:45:34.655897"], ["updated_at", "2018-09-30 10:45:34.655897"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Sofa"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sofa"], ["created_at", "2018-09-30 10:45:34.679861"], ["updated_at", "2018-09-30 10:45:34.679861"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Tabel"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tabel"], ["created_at", "2018-09-30 10:45:34.690610"], ["updated_at", "2018-09-30 10:45:34.690610"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Gas Stand"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gas Stand"], ["created_at", "2018-09-30 10:45:34.701824"], ["updated_at", "2018-09-30 10:45:34.701824"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Geyser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Geyser"], ["created_at", "2018-09-30 10:45:34.712957"], ["updated_at", "2018-09-30 10:45:34.712957"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Wash Basin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wash Basin"], ["created_at", "2018-09-30 10:45:34.724241"], ["updated_at", "2018-09-30 10:45:34.724241"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Window"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Window"], ["created_at", "2018-09-30 10:45:34.735951"], ["updated_at", "2018-09-30 10:45:34.735951"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Curtains"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Curtains"], ["created_at", "2018-09-30 10:45:34.746764"], ["updated_at", "2018-09-30 10:45:34.746764"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Chair"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chair"], ["created_at", "2018-09-30 10:45:34.758637"], ["updated_at", "2018-09-30 10:45:34.758637"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Gallery"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gallery"], ["created_at", "2018-09-30 10:45:34.768741"], ["updated_at", "2018-09-30 10:45:34.768741"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "TV"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "TV"], ["created_at", "2018-09-30 10:45:34.780547"], ["updated_at", "2018-09-30 10:45:34.780547"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "WiFi"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "WiFi"], ["created_at", "2018-09-30 10:45:34.791615"], ["updated_at", "2018-09-30 10:45:34.791615"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Washing Machine"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.6ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Washing Machine"], ["created_at", "2018-09-30 10:45:34.802701"], ["updated_at", "2018-09-30 10:45:34.802701"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Refrigerator"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Refrigerator"], ["created_at", "2018-09-30 10:45:34.813756"], ["updated_at", "2018-09-30 10:45:34.813756"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Induction"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Induction"], ["created_at", "2018-09-30 10:45:34.824774"], ["updated_at", "2018-09-30 10:45:34.824774"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Microwave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Microwave"], ["created_at", "2018-09-30 10:45:34.835060"], ["updated_at", "2018-09-30 10:45:34.835060"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "RO"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "RO"], ["created_at", "2018-09-30 10:45:34.846118"], ["updated_at", "2018-09-30 10:45:34.846118"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Parking"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.6ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Parking"], ["created_at", "2018-09-30 10:45:34.858354"], ["updated_at", "2018-09-30 10:45:34.858354"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "AC"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "AC"], ["created_at", "2018-09-30 10:45:34.869094"], ["updated_at", "2018-09-30 10:45:34.869094"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (6.7ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Cooler"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cooler"], ["created_at", "2018-09-30 10:45:34.886755"], ["updated_at", "2018-09-30 10:45:34.886755"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Fan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.4ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fan"], ["created_at", "2018-09-30 10:45:34.902401"], ["updated_at", "2018-09-30 10:45:34.902401"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (51.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "Wardrobe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.6ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wardrobe"], ["created_at", "2018-09-30 10:45:34.958947"], ["updated_at", "2018-09-30 10:45:34.958947"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "shoe_rake"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "shoe_rake"], ["created_at", "2018-09-30 10:45:34.969705"], ["updated_at", "2018-09-30 10:45:34.969705"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "amenities" WHERE "amenities"."name" = $1 LIMIT $2[0m  [["name", "charging_plug"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAmenity Create (0.5ms)[0m  [1m[32mINSERT INTO "amenities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "charging_plug"], ["created_at", "2018-09-30 10:45:34.980816"], ["updated_at", "2018-09-30 10:45:34.980816"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFurnishingType Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "furnishing_types" WHERE "furnishing_types"."name" = $1 LIMIT $2[0m  [["name", "Semi Furnished"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFurnishingType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "furnishing_types" WHERE "furnishing_types"."name" = $1 LIMIT $2[0m  [["name", "Fully Furnished"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFurnishingType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "furnishing_types" WHERE "furnishing_types"."name" = $1 LIMIT $2[0m  [["name", "Un Furnished"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSharingType Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "sharing_types" WHERE "sharing_types"."name" = $1 LIMIT $2[0m  [["name", "Individual"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSharingType Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "sharing_types" WHERE "sharing_types"."name" = $1 LIMIT $2[0m  [["name", "Shared"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mTenantType Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "tenant_types" WHERE "tenant_types"."name" = $1 LIMIT $2[0m  [["name", "Student"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mTenantType Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "tenant_types" WHERE "tenant_types"."name" = $1 LIMIT $2[0m  [["name", "Employee"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mExpence Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "expences" WHERE "expences"."name" = $1 LIMIT $2[0m  [["name", "Electricity Bill"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mExpence Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "expences" WHERE "expences"."name" = $1 LIMIT $2[0m  [["name", "Cleaning"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mExpence Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "expences" WHERE "expences"."name" = $1 LIMIT $2[0m  [["name", "Garbage Collection"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Admin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mRole Create (0.6ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Admin"], ["created_at", "2018-09-30 10:45:35.439806"], ["updated_at", "2018-09-30 10:45:35.439806"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Owner"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Owner"], ["created_at", "2018-09-30 10:45:35.457646"], ["updated_at", "2018-09-30 10:45:35.457646"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Tenant"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tenant"], ["created_at", "2018-09-30 10:45:35.468723"], ["updated_at", "2018-09-30 10:45:35.468723"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBathType Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "bath_types" WHERE "bath_types"."name" = $1 LIMIT $2[0m  [["name", "Attached"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBathType Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "bath_types" WHERE "bath_types"."name" = $1 LIMIT $2[0m  [["name", "Non-Attached"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:22
+Started GET "/" for ::1 at 2018-09-30 16:26:06 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.3ms)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth" for ::1 at 2018-09-30 16:26:47 +0530
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3001)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth" for ::1 at 2018-09-30 16:30:17 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3001)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-09-30 16:32:03 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth" for 127.0.0.1 at 2018-09-30 16:32:13 +0530
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7351992778863311145)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7351992778863311145)[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/bin/rake:23
+Started POST "/auth" for 127.0.0.1 at 2018-09-30 16:44:30 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth" for 127.0.0.1 at 2018-09-30 16:49:02 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth" for 127.0.0.1 at 2018-09-30 16:49:46 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/virendra/.rvm/gems/ruby-2.5.1@polapine/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth" for 127.0.0.1 at 2018-09-30 16:50:10 +0530
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"abc@gmail.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"abc@gmail.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.4.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

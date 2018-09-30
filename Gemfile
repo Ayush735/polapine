@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
+gem 'devise_token_auth'
+
+gem 'omniauth'
+
+gem 'rack-cors', :require => 'rack/cors'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
