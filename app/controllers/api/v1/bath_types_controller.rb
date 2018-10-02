@@ -1,17 +1,11 @@
 class Api::V1::BathTypesController < Api::V1::BaseController
-  protect_from_forgery with: :exception
-  before_action :load_bath_type, only: [:show, :update, :destroy]
-
+  before_action :load_bath_type, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
   
   def index
     @bath_types = BathTypes.all
     render json: @bath_types 
   end
-
-  # def new
-  #   @bath_type = BathType.new
-  #   render json: @bath_type
-  # end
 
   def create 
     @bath_type = BathType.new(bath_type_params)
@@ -22,9 +16,9 @@ class Api::V1::BathTypesController < Api::V1::BaseController
     end  
   end
 
-  # def edit
-  #   render json: @bath_type
-  # end
+  def edit
+    render json: @bath_type
+  end
 
   def update
     if @bath_type.update(bath_type_params)
@@ -32,10 +26,6 @@ class Api::V1::BathTypesController < Api::V1::BaseController
     else
       render json: {bath_type :@bath_type , errors: @bath_type.errors.full_messages, status: :unproccessable_entity}
      end 
-  end
-
-  def show
-    render json: @bath_type
   end
   
   def destroy

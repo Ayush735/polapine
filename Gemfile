@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,10 +31,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt'
 
 gem 'devise_token_auth'
-
-gem 'omniauth'
-
 gem 'rack-cors', :require => 'rack/cors'
+gem 'omniauth-github'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
